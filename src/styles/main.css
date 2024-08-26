@@ -423,7 +423,7 @@ p {
     padding: 100px 20px;
     background-color: #0a192f;
     color: #ffffff;
-    text-align: left;
+    text-align: center;
     position: relative;
 }
 
@@ -434,61 +434,57 @@ p {
     text-align: center;
 }
 
-.timeline-container{
+.timeline-container {
     display: flex;
     justify-content: center;
 }
 
 .timeline {
     position: relative;
-    width: 80%;
+    width: 90%; /* Limita el ancho de la línea de tiempo */
+    max-width: 800px; /* Ajusta el ancho máximo para centrar y limitar */
     margin-top: 30px;
-    border-left: 3px solid #00FFFF;
     padding: 0 20px;
-    max-width: 800px;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -3px;
-    width: 3px;
-    background-color: #00FFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .timeline-item {
     position: relative;
     margin-bottom: 50px;
-    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .timeline-item::before {
     content: '';
     position: absolute;
-    left: -13px;
-    top: 10px;
+    left: 50%; /* Alineación centrada */
+    transform: translateX(-50%);
+    top: 0;
     width: 20px;
     height: 20px;
     background-color: #0a192f;
     border: 3px solid #00FFFF;
     border-radius: 50%;
     z-index: 1;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Añadir el efecto de foco alrededor del círculo */
 }
 
 .timeline-date {
-    position: absolute;
-    left: -100px;
-    top: 10px;
-    width: 80px;
+    position: relative;
+    display: inline-block;
     background-color: #00FFFF;
     color: #0a192f;
     font-weight: bold;
-    padding: 5px 10px;
+    padding: 5px 15px;
     border-radius: 5px;
+    margin-bottom: 20px;
     text-align: center;
-    transform: translateY(-50%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Añade una sombra ligera para el efecto de tag */
 }
 
 .timeline-content {
@@ -496,9 +492,10 @@ p {
     padding: 20px 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-left: 20px;
+    margin-top: 30px; /* Añadir margen para crear separación de la línea de tiempo */
 }
 
 .timeline-content:hover {
@@ -510,12 +507,14 @@ p {
     margin: 0 0 10px;
     font-size: 1.8rem;
     color: #ffffff;
+    text-align: left;
 }
 
 .timeline-content h4 {
     margin: 5px 0;
     font-size: 1.2rem;
     color: #cfd8dc;
+    text-align: left;
 }
 
 .timeline-content p {
@@ -523,6 +522,24 @@ p {
     font-size: 1rem;
     line-height: 1.6;
     color: #aaaaaa;
+    text-align: left;
+}
+
+/* Estilos para la línea intercalada */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Alineación centrada */
+    transform: translateX(-50%);
+    top: 20px;
+    width: 3px;
+    height: 100%;
+    background-color: #00FFFF;
+    z-index: 0;
+}
+
+.timeline-item:last-child::after {
+    height: 50%; /* Ajustar el final de la línea para el último elemento */
 }
 
 /* Ajustar responsividad para pantallas más pequeñas */
@@ -532,13 +549,12 @@ p {
     }
 
     .timeline {
-        width: 90%;
+        width: 100%;
         padding: 0 10px;
     }
 
     .timeline-date {
-        left: -60px;
-        position: relative;
+        margin-left: 0;
         transform: none;
         margin-bottom: 10px;
     }
@@ -546,5 +562,10 @@ p {
     .timeline-content {
         margin-left: 0;
         padding-left: 10px;
+    }
+
+    .timeline-item::before,
+    .timeline-item::after {
+        left: calc(50% - 1.5px); /* Ajuste para centrar en pantallas pequeñas */
     }
 }
