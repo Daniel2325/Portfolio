@@ -1,7 +1,10 @@
 import {scrollToSection} from "../utils/scrollTo";
+import fotoDaniel from "../assets/images/MacBook Mockup.png";
 
 const Home = () => {
-    return (<section id="home" className="home-section">
+
+    return (
+        <section id="home" className="home-section">
             <div className="home-content">
                 <div className="home-text">
                     <div className="shapes">
@@ -18,10 +21,11 @@ const Home = () => {
                         <span className="arrow"></span>
                     </div>
                     <div className="cube"></div>
+
                 </div>
 
                 <div className="home-image">
-                    <img src="ruta/foto.jpg" alt="Daniel" className="profile-image"/>
+                    <img src={fotoDaniel} alt="Daniel" className="profile-image"/>
                 </div>
 
             </div>
