@@ -2,12 +2,14 @@ import React, {useState} from 'react';
 import {scrollToSection} from '../utils/scrollTo';
 
 const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
     const handleNavigation = (event, id) => {
         event.preventDefault();
         scrollToSection(id);
+        setIsOpen(false);
     }
 
-    const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
