@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCode, faDatabase, faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
 
 const Experience = () => {
     const [expandedItems, setExpandedItems] = useState([true, true, true]);
@@ -15,16 +17,28 @@ const Experience = () => {
             <div className="timeline-container">
                 <div className="timeline">
                     {/* Primer trabajo */}
-                    <div className="timeline-item">
+                    <div className="timeline-item ">
                         <div className="circle" onClick={() => handleToggle(0)}></div>
                         <div className="timeline-date">2022 - Present</div>
                         <div className={`timeline-content ${expandedItems[0] ? 'expanded' : 'collapsed'}`}>
+                            <FontAwesomeIcon icon={faCode} className="experience-icon" />
+                            <FontAwesomeIcon icon={faDatabase} className="experience-icon" />
+                            <FontAwesomeIcon icon={faProjectDiagram} className="experience-icon" />
+
                             <h3>Analista de Programación</h3>
                             <h4>Metropolitan Touring, Quito, Ecuador</h4>
                             <p>
-                                Responsable de analizar, diseñar y desarrollar soluciones de software.
-                                Trabajando con tecnologías como Git, atención al detalle y otras 8 habilidades destacadas.
+                                Responsable de analizar, diseñar y desarrollar soluciones de software utilizando
+                                tecnologías modernas como Git y patrones de arquitectura.
                             </p>
+                            <ul>
+                                <li>Automatización de procesos internos, reduciendo el tiempo de desarrollo en un 20%.
+                                </li>
+                                <li>Mejora de la eficiencia de las bases de datos mediante optimización de consultas
+                                    SQL.
+                                </li>
+                                <li>Implementación de pruebas unitarias con un 30% menos de errores en producción.</li>
+                            </ul>
                         </div>
                     </div>
 
@@ -36,9 +50,15 @@ const Experience = () => {
                             <h3>Ingeniero de Software Júnior</h3>
                             <h4>Metropolitan Touring, En remoto</h4>
                             <p>
-                                Desarrollé aplicaciones usando programación en .NET y Entity Framework.
-                                Mejora de procesos de desarrollo y colaboración en un entorno ágil.
+                                Desarrollo de aplicaciones usando programación en .NET y Entity Framework, colaborando
+                                en un entorno ágil con DevOps.
                             </p>
+                            <ul>
+                                <li>Reducción de costos en infraestructura mediante la integración de Docker en CI/CD.
+                                </li>
+                                <li>Diseño e implementación de microservicios mejorando la escalabilidad en un 40%.</li>
+                                <li>Optimización de procesos, reduciendo el tiempo de despliegue en un 15%.</li>
+                            </ul>
                         </div>
                     </div>
 
@@ -50,9 +70,16 @@ const Experience = () => {
                             <h3>Pasante IT</h3>
                             <h4>Metropolitan Touring, En remoto</h4>
                             <p>
-                                Participación en proyectos de soporte técnico y desarrollo de software durante el período de prácticas.
-                                Aprendí habilidades clave de programación y gestión de bases de datos.
+                                Participación en el soporte técnico y desarrollo de software, trabajando directamente
+                                con bases de datos SQL.
                             </p>
+                            <ul>
+                                <li>Soporte en la migración de datos críticos, reduciendo tiempos de inactividad.</li>
+                                <li>Desarrollo de reportes analíticos para la toma de decisiones del negocio.</li>
+                                <li>Aprendizaje y aplicación de mejores prácticas de desarrollo, incluyendo principios
+                                    SOLID.
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>

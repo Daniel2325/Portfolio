@@ -253,50 +253,69 @@ p {
 }
 
 .expertise-section {
-    padding: 100px 20px;
+    padding: 80px 20px;
     background-color: #111;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
 }
 
 .expertise-section h2 {
     font-size: 3rem;
     margin-bottom: 50px;
+
 }
 
-.expertise-table {
-    width: 100%;
+.expertise-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    max-width: 800px;
     margin: 0 auto;
-    border-collapse: collapse;
 }
 
-.expertise-table tr {
-    border-bottom: 1px solid #333;
-    transition: background-color 0.9s ease;
-}
-
-.expertise-table tr:hover {
-    background-color: #222;
-}
-
-.icon-cell {
-    width: 60px;
+.expertise-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 20px;
-    font-size: 2.5rem;
-    text-align: center;
-    vertical-align: middle;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
 }
 
-.expertise-table h3 {
-    font-size: 1.5rem;
-    margin: 0;
-    padding: 20px 0;
-    font-weight: 680;
-    position: relative;
+.expertise-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.icon {
+    font-size: 2.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.2); /* Aumentar el tamaño del ícono al hacer hover */
+}
+
+.expertise-details {
+    text-align: left;
+}
+
+.expertise-details h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.expertise-details p {
+    font-size: 1.2rem;
+    color: #cfd8dc;
 }
 
 .highlight {
     position: relative;
+    display: inline-block;
+
 }
 
 .highlight::after {
@@ -304,12 +323,15 @@ p {
     position: absolute;
     bottom: -5px;
     left: 0;
-    width: 100px;
+    width: 0;
     height: 5px;
     background-color: currentColor;
-    z-index: -1;
+    transition: width 0.3s ease;
 }
 
+.expertise-item:hover .highlight::after {
+    width: 100%; /* Muestra el subrayado al hacer hover */
+}
 .highlight.pink::after {
     background-color: #ff007f;
 }
@@ -330,19 +352,42 @@ p {
     padding: 0 20px;
 }
 
+@media (max-width: 768px) {
+    .expertise-grid {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .expertise-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .icon {
+        font-size: 2rem;
+    }
+
+    .expertise-details h3 {
+        font-size: 1.5rem;
+    }
+
+    .expertise-details p {
+        font-size: 1rem;
+    }
+}
 /* ===========================
    Home
    =========================== */
 .home-section {
     padding: 0 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    background-color: #0d1b2a;
-    background-image: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
-    height: auto;
-    min-height: 100vh; /* Ajusta a 90% de la pantalla para que no sea tan alto */
+    justify-content: center;
+    background: linear-gradient(180deg, #0d1b2a 0%, #203a43 50%, #111 100%);
 
+    height: auto;
 
 }
 
@@ -406,10 +451,10 @@ p {
 }
 
 .cta-button:hover {
-    transform:  scale(1.05); /* Crecimiento ligero del boton en hover*/
+    transform: scale(1.05); /* Crecimiento ligero del boton en hover*/
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.6); /* Sombra en hover */
     background-color: #00FFFF;
-    color : #0f2027;
+    color: #0f2027;
 }
 
 .cta-button.download:hover {
@@ -467,6 +512,27 @@ p {
     border-radius: 15px; /* Bordes suaves */
     max-width: 600px;
     width: 100%;
+}
+
+.separator {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.separator svg {
+    position: relative;
+    display: block;
+    width: calc(130% + 1.3px); /* Extiende un poco más el ancho para asegurar cobertura total */
+    height: 100px;
+    transform: rotateY(180deg); /* Si deseas invertir la orientación */
+}
+
+.shape-fill {
+    fill: #0f2027; /* Ajusta el color al fondo de la siguiente sección */
 }
 
 @keyframes rotateCube {
@@ -675,17 +741,18 @@ p {
 /*Experience*/
 .experience-section {
     padding: 100px 20px;
-    background-color: #0a192f;
+    background: linear-gradient(135deg, #1C3B57, #275A4E); /* Fondo mejorado */
     color: #ffffff;
     text-align: center;
     position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.6s ease-in-out;
 }
 
 .experience-section h2 {
     font-size: 3.5rem;
     margin-bottom: 50px;
     color: #00FFFF;
-    text-align: center;
 }
 
 .timeline-container {
@@ -697,7 +764,6 @@ p {
     position: relative;
     width: 90%;
     max-width: 800px;
-    margin-top: 30px;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
@@ -712,24 +778,49 @@ p {
     align-items: center;
     width: 100%;
     overflow: hidden; /* Esconder contenido al colapsar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agrega transición suave */
+}
+
+.timeline-item.expanded {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .timeline-item::before {
+    width: 2px;
     content: '';
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 3px;
     height: 100%;
-    background-color: #00FFFF;
+    background-color: rgba(0, 255, 255, 0.6); /* Hacer la línea más sutil */
     z-index: 0;
 }
 
+.timeline-item:hover {
+    transform: translateY(-5px); /* Efecto de elevación sutil */
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1); /* Sombra sutil al hacer hover */
+}
+.experience-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+.timeline-content h3 {
+    transition: color 0.3s ease, transform 0.3s ease;
+
+}
+
+.timeline-content:hover h3 {
+    color: #00FFFF; /* Cambiar color del título en hover */
+    transform: translateX(5px); /* Desplazamiento leve hacia la derecha */
+}
+
 .circle {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     background-color: #0a192f;
-    border: 3px solid #00FFFF;
+    border: 2px solid #00FFFF;
     border-radius: 50%;
     cursor: pointer;
     position: relative;
@@ -744,11 +835,10 @@ p {
 }
 
 .timeline-date {
-    position: relative;
-    display: inline-block;
+    font-size: 1.3rem;
     background-color: #00FFFF;
     color: #0a192f;
-    font-weight: bold;
+    font-weight: 700;
     padding: 5px 15px;
     border-radius: 5px;
     margin-bottom: 20px;
@@ -759,39 +849,66 @@ p {
 
 .timeline-content {
     background-color: #112240;
-    padding: 20px 30px;
+    padding: 25px 40px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     width: 100%;
     position: relative;
-    margin-top: 10px; /* Espacio entre el contenido y la línea */
-    transition: max-height 0.5s ease, opacity 0.5s ease;
+    margin-top: 10px;
     opacity: 1;
-    max-height: 500px; /* Suficiente altura para expandir el contenido */
-}
-
-.timeline-content.collapsed {
-    max-height: 0; /* Contrae el contenido a 0 */
-    opacity: 0;
+    max-height: 0;
+    transition: max-height 0.6s ease, opacity 0.6s ease;
+    overflow: hidden;
+    margin-bottom: 40px;
 }
 
 .timeline-content.expanded {
-    max-height: 500px; /* Suficiente altura para expandir el contenido */
+    max-height: 500px;
     opacity: 1;
 }
 
+.timeline-content.collapsed {
+    max-height: 0;
+    opacity: 0;
+}
+
 .timeline-content h3 {
-    margin: 0 0 10px;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #ffffff;
     text-align: left;
+    position: relative;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.timeline-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00FFFF;
+    transition: width 0.3s ease-in-out;
 }
 
 .timeline-content h4 {
-    margin: 5px 0;
     font-size: 1.2rem;
     color: #cfd8dc;
+    margin-bottom: 15px;
     text-align: left;
+}
+
+.timeline-content ul {
+    list-style: disc;
+    padding-left: 25px;
+    text-align: left;
+}
+
+.timeline-content ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #cfd8dc;
 }
 
 .timeline-content p {
@@ -804,27 +921,29 @@ p {
 
 /* Responsividad para pantallas más pequeñas */
 @media (max-width: 768px) {
-    .timeline-container {
-        width: 100%;
-    }
-
     .timeline {
         width: 100%;
         padding: 0 10px;
     }
 
+    .timeline-content ul li {
+        font-size: 1rem;
+    }
+
     .timeline-date {
-        left: 5%;
-        margin-bottom: 10px;
+        font-size: 1rem;
+        padding: 5px 10px;
     }
 
     .timeline-content {
-        margin-left: 0;
-        padding-left: 10px;
+        padding: 15px;
     }
 
-    .timeline-item::before,
-    .timeline-item::after {
-        left: calc(50% - 1.5px);
+    .timeline-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .timeline-content h4 {
+        font-size: 1rem;
     }
 }
