@@ -9,7 +9,7 @@ const Contact = () => {
             <p>If you have a project or just want to say hi, feel free to reach out!</p>
 
             <div className="contact-container">
-                <div className="contact-details">
+                <div className="contact-details contact-card">
                     <h3>Contact Information</h3>
                     <div className="contact-item">
                         <FaEnvelope className="contact-icon"/>
@@ -25,7 +25,7 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <div className="contact-form">
+                <div className="contact-form contact-card">
                     <h3>Send a Message</h3>
                     <form>
                         <div className="form-group">
