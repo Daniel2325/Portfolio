@@ -8,12 +8,12 @@ body {
 
 h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 6rem;
+    font-size: 5.5rem;
     font-weight: 300; /* Grosor de la fuente */
-    letter-spacing: 0.15em; /* Espaciado entre letras */
+    letter-spacing: 0.05em; /* Espaciado entre letras */
     color: white;
     margin-top: 0; /* Asegúrate de que no tenga margen superior */
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 
 }
 
@@ -33,11 +33,16 @@ h1, .subtitle, .bio, .cta-buttons {
 }
 
 .subtitle {
-    font-size: 1.8rem;
-    font-weight: 400;
+    font-size: 2rem;
+    font-weight: 500;
     color: #cfd8dc;
     letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+}
 
+.divider {
+    margin: 0 10px;
+    color: #00ffff;
 }
 
 .App {
@@ -217,7 +222,7 @@ p {
 
 .scroll-icon {
     position: absolute;
-    bottom: 40px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
@@ -254,7 +259,7 @@ p {
 
 .expertise-section {
     padding: 80px 20px;
-    background-color: #111;
+    background: linear-gradient(180deg, #1c2833, #2c3e50);
     color: #ffffff;
     text-align: center;
 }
@@ -376,6 +381,18 @@ p {
         font-size: 1rem;
     }
 }
+
+/* ===========================
+   Work
+   =========================== */
+
+.work-section {
+    padding: 100px 20px;
+    background: linear-gradient(180deg, #2c3e50, #23303f);
+    color: #ffffff;
+    text-align: center;
+}
+
 /* ===========================
    Home
    =========================== */
@@ -385,8 +402,7 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(180deg, #0d1b2a 0%, #203a43 50%, #111 100%);
-
+    background: linear-gradient(180deg, #101820, #1c2833);
     height: auto;
 
 }
@@ -407,9 +423,9 @@ p {
 .bio {
     font-size: 1.2rem;
     color: #cfd8dc;
-    margin-top: 1.5rem;
-    max-width: 500px;
+    max-width: 600px;
     line-height: 1.6;
+    margin-bottom: 2.5rem;
 }
 
 .tech-icons {
@@ -433,16 +449,16 @@ p {
 .cta-buttons {
     margin-top: 30px;
     display: flex;
-    gap: 15px;
+    gap: 20px;
     justify-content: center;
 }
 
 .cta-button {
-    padding: 10px 25px;
+    padding: 12px 30px;
     border: 2px solid #00ffff;
     background: transparent;
     color: white;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
@@ -451,7 +467,7 @@ p {
 }
 
 .cta-button:hover {
-    transform: scale(1.05); /* Crecimiento ligero del boton en hover*/
+    transform: scale(1.08); /* Crecimiento ligero del boton en hover*/
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.6); /* Sombra en hover */
     background-color: #00FFFF;
     color: #0f2027;
@@ -631,7 +647,7 @@ p {
 /*Contact*/
 .contact-section {
     padding: 40px 20px;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background: linear-gradient(180deg, #1a252e, #101820);
     color: white;
     text-align: center;
 }
@@ -770,7 +786,7 @@ p {
 /*Experience*/
 .experience-section {
     padding: 100px 20px;
-    background: linear-gradient(135deg, #1C3B57, #275A4E); /* Fondo mejorado */
+    background: linear-gradient(180deg, #23303f, #1a252e);
     color: #ffffff;
     text-align: center;
     position: relative;
