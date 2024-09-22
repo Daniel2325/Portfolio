@@ -11,10 +11,16 @@ h1 {
     font-size: 5.5rem;
     font-weight: 300; /* Grosor de la fuente */
     letter-spacing: 0.05em; /* Espaciado entre letras */
-    color: rgba(201, 182, 87, 0.81);
+    color: rgba(230, 180, 60, 0.9); /* Ajusta el tono dorado */
     margin-top: 0; /* Asegúrate de que no tenga margen superior */
     margin-bottom: 2rem;
 
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
 }
 
 h1, .subtitle, .bio, .cta-buttons {
@@ -218,6 +224,13 @@ h2 {
 p {
     font-size: 1.5vw;
     line-height: 1.5;
+}
+
+.scroll-icon .arrow {
+    width: 14px;
+    height: 14px;
+    border-right: 2px solid #00FFFF;
+    border-bottom: 2px solid #00FFFF;
 }
 
 .scroll-icon {
@@ -499,7 +512,7 @@ p {
 }
 
 .tech-icons svg:hover {
-    transform: scale(1.3);
+    transform: scale(1.4);
     color: #ff007f;
 }
 
@@ -644,12 +657,11 @@ p {
     }
 
     .home-image {
-        display: none; /* Oculta la imagen en pantallas pequeñas */
+        display: block; /* Cambia de 'none' a 'block' */
     }
 
     .profile-image {
-        width: 60%; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
-        max-width: 200px; /* Tamaño máximo de la imagen en pantallas pequeñas */
+        width: 40%; /* Ajusta el tamaño según sea necesario */
     }
 }
 

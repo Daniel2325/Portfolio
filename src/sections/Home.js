@@ -12,12 +12,13 @@ import {
     faPython
 } from '@fortawesome/free-brands-svg-icons';
 import {useEffect, useRef, useState} from "react";
+import {faDownload, faFolderOpen} from "@fortawesome/free-solid-svg-icons";
 
 const LoadingScreen = () => {
     return (
         <div className={"loading-screen"}>
             <div className={"spinner"}></div>
-            <p className={"loading-text"}>Loading...</p>
+            <p className={"loading-text"}>Preparando tu experiencia DevOps...</p>
         </div>
     )
 }
@@ -61,7 +62,7 @@ const Home = () => {
                 <section id="home" className="home-section">
                     <div className="home-content">
                         <div className="home-text">
-                            <Typewriter text={`Daniel.D Dev`} />
+                            <Typewriter text={`Daniel.D Dev`}/>
 
                             <p className="subtitle">Full Stack Developer <span className="divider">|</span> Especialista
                                 en
@@ -69,12 +70,12 @@ const Home = () => {
 
                             <p className="bio">
                                 Ingeniero Full Stack con 3 años de experiencia en frontend (React, Angular) y backend
-                                (.NET,
-                                Python).
+                                (.NET, Python).
                                 Administro Azure DevOps implementando CI/CD y análisis de código con SonarCloud. Experto
-                                en
-                                Salesforce, creando soluciones escalables y optimizadas.
-                                Mi enfoque está en el desarrollo ágil, automatización y optimización de procesos.
+                                en Salesforce,
+                                he creado soluciones escalables para grandes empresas, optimizando su rendimiento en un
+                                30%. Mi enfoque
+                                está en el desarrollo ágil, automatización y optimización de procesos.
                             </p>
 
                             <div className="tech-icons">
@@ -89,10 +90,12 @@ const Home = () => {
                             </div>
 
                             <div className="cta-buttons">
-                                <button onClick={() => scrollToSection('work')} className="cta-button">Explora mis
-                                    Proyectos
+                                <button onClick={() => scrollToSection('work')} className="cta-button">
+                                    <FontAwesomeIcon icon={faFolderOpen}/> Explora mis Proyectos
                                 </button>
-                                <button className="cta-button dowload">Descarga mi CV</button>
+                                <button className="cta-button download">
+                                    <FontAwesomeIcon icon={faDownload}/> Descarga mi CV
+                                </button>
                             </div>
 
                             <div className="scroll-icon" onClick={() => scrollToSection('expertise')}>
