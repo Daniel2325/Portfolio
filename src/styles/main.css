@@ -234,8 +234,8 @@ p {
 }
 
 .scroll-icon {
-    position: absolute;
-    bottom: 20px;
+    position: relative;
+    bottom: auto;
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
@@ -244,6 +244,7 @@ p {
     align-items: center;
     z-index: 1000; /* Siempre arriba */
     animation: fadeIn 2s ease-out;
+    margin-top: 20px;
 }
 
 .mouse {
@@ -467,13 +468,13 @@ p {
 }
 
 .home-section {
-    padding: 0 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background: linear-gradient(180deg, #101820, #1c2833);
     height: auto;
+    padding-top: 80px;
 
 }
 
@@ -562,7 +563,7 @@ p {
 
 .profile-image {
     border-radius: 15px; /* Bordes suaves */
-    max-width: 600px;
+    max-width: 500px;
     width: 100%;
 }
 

@@ -23,7 +23,7 @@ const LoadingScreen = () => {
     )
 }
 
-const Typewriter = ({ text }) => {
+const Typewriter = ({text}) => {
     const textRef = useRef(null);
 
     useEffect(() => {
@@ -99,9 +99,9 @@ const Home = () => {
                             </div>
 
                             <div className="scroll-icon" onClick={() => scrollToSection('expertise')}>
-                    <span className="mouse">
-                        <span className="mouse-in"></span>
-                    </span>
+                            <span className="mouse">
+                                <span className="mouse-in"></span>
+                            </span>
                                 <span className="arrow"></span>
                             </div>
 
