@@ -17,14 +17,13 @@ const Experience = () => {
             <div className="timeline-container">
                 <div className="timeline">
                     {/* Primer trabajo */}
-                    <div className="timeline-item ">
+                    <div className="timeline-item">
                         <div className="circle" onClick={() => handleToggle(0)}></div>
                         <div className="timeline-date">2022 - Present</div>
                         <div className={`timeline-content ${expandedItems[0] ? 'expanded' : 'collapsed'}`}>
-                            <FontAwesomeIcon icon={faCode} className="experience-icon" />
-                            <FontAwesomeIcon icon={faDatabase} className="experience-icon" />
-                            <FontAwesomeIcon icon={faProjectDiagram} className="experience-icon" />
-
+                            <FontAwesomeIcon icon={faCode} className="experience-icon"/>
+                            <FontAwesomeIcon icon={faDatabase} className="experience-icon"/>
+                            <FontAwesomeIcon icon={faProjectDiagram} className="experience-icon"/>
                             <h3>Analista de Programación</h3>
                             <h4>Metropolitan Touring, Quito, Ecuador</h4>
                             <p>
@@ -32,12 +31,15 @@ const Experience = () => {
                                 tecnologías modernas como Git y patrones de arquitectura.
                             </p>
                             <ul>
-                                <li>Automatización de procesos internos, reduciendo el tiempo de desarrollo en un 20%.
+                                <li>Automatización de procesos internos, reduciendo el tiempo de desarrollo en un <span
+                                    className="highlight">20%</span>.
                                 </li>
                                 <li>Mejora de la eficiencia de las bases de datos mediante optimización de consultas
                                     SQL.
                                 </li>
-                                <li>Implementación de pruebas unitarias con un 30% menos de errores en producción.</li>
+                                <li>Implementación de pruebas unitarias con un <span
+                                    className="highlight">30%</span> menos de errores en producción.
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -56,8 +58,12 @@ const Experience = () => {
                             <ul>
                                 <li>Reducción de costos en infraestructura mediante la integración de Docker en CI/CD.
                                 </li>
-                                <li>Diseño e implementación de microservicios mejorando la escalabilidad en un 40%.</li>
-                                <li>Optimización de procesos, reduciendo el tiempo de despliegue en un 15%.</li>
+                                <li>Diseño e implementación de microservicios mejorando la escalabilidad en un <span
+                                    className="highlight">40%</span>.
+                                </li>
+                                <li>Optimización de procesos, reduciendo el tiempo de despliegue en un <span
+                                    className="highlight">15%</span>.
+                                </li>
                             </ul>
                         </div>
                     </div>
