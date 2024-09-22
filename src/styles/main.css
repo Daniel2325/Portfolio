@@ -698,7 +698,7 @@ p {
 
 /*Contact*/
 .contact-section {
-    padding: 40px 20px;
+    padding: 80px 20px;
     background: linear-gradient(180deg, #1a252e, #101820);
     color: white;
     text-align: center;
@@ -721,6 +721,8 @@ p {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .contact-card {
@@ -729,11 +731,20 @@ p {
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-basis: 48%; /* Usamos flex-basis para asegurar que en pantallas grandes ocupen el 48% */
+
 }
 
 .contact-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 24px rgba(0, 255, 255, 0.4);
+}
+
+.contact-title {
+    font-size: 1.8rem;
+    color: #cfd8dc;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .contact-details h3, .contact-form h3 {
@@ -755,7 +766,12 @@ p {
     min-width: 300px;
 }
 
-
+.contact-title {
+    font-size: 1.8rem;
+    color: #cfd8dc;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
 
 .contact-item {
     display: flex;
@@ -781,12 +797,10 @@ p {
 }
 
 .contact-item:hover .contact-icon{
+    transform: scale(1.2);
     color: #ff007f;
 }
 
-/*.contact-form .form-group {
-    margin-bottom: 20px;
-}*/
 
 .contact-form input,
 .contact-form textarea {
@@ -807,7 +821,8 @@ p {
     outline: none;
 }
 
-.contact-form button {
+/* Send Message Button */
+.send-message-button {
     padding: 15px 40px;
     border: none;
     border-radius: 30px;
@@ -818,6 +833,13 @@ p {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.send-message-button:hover {
+    background-color: #ff007f;
+    transform: translateY(-3px);
+}
+
+
+
 .contact-form button:hover {
     background-color: #ff007f;
     transform: translate(-5px);
@@ -826,12 +848,12 @@ p {
 /* Ajustes responsivos */
 @media (max-width: 768px) {
     .contact-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Cambiar el layout a columna en móviles */
     }
 
     .contact-card {
-        width: 100%;
+        flex-basis: 100%; /* Ocupa el 100% del ancho en móviles */
+        margin-bottom: 20px; /* Añadir margen entre los cards en móviles */
     }
 }
 
@@ -859,48 +881,91 @@ p {
 
 .timeline {
     position: relative;
-    width: 90%;
-    max-width: 800px;
-    padding: 0 20px;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .timeline-item {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.07); /* Fondo más suave */
+    margin: 20px 0;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra más ligera */
+    transition: all 0.4s ease; /* Transición suave al hacer hover */
+    max-width: 700px;
     width: 100%;
-    overflow: hidden; /* Esconder contenido al colapsar */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agrega transición suave */
 }
 
 .timeline-item.expanded {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.timeline-item::before {
-    width: 2px;
-    content: '';
+/* Corregir la posición del círculo y la fecha */
+.timeline-item .circle {
+    width: 20px;
+    height: 20px;
+    background-color: #00ffff;
+    border-radius: 50%;
     position: absolute;
     left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-radius: 15px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgba(0, 255, 255, 0.7));
+    background-size: 200% 100%;
+    z-index: -1;
+    transition: background-position 1.5s ease;
+}
+
+.timeline-item:hover::before {
+    background-position: 100% 0; /* Efecto de recorrido de luz */
+}
+
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3); /* Efecto de hover con sombra más ligera */
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: calc(100% - 80px); /* Ajuste para que termine en el último ítem */
+    width: 2px;
+    background-color: #00ffff;
     transform: translateX(-50%);
-    height: 100%;
-    background-color: rgba(0, 255, 255, 0.6); /* Hacer la línea más sutil */
     z-index: 0;
 }
 
-.timeline-item:hover {
-    transform: translateY(-5px); /* Efecto de elevación sutil */
-    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1); /* Sombra sutil al hacer hover */
+@keyframes pulseLine {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
 }
+
 .experience-icon {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-right: 10px;
     color: #ffffff;
-    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .experience-icon:hover {
@@ -913,7 +978,12 @@ p {
     font-weight: bold;
 }
 
+
 .timeline-content h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #00bfbf; /* Un tono más oscuro para el título */
     transition: color 0.3s ease, transform 0.3s ease;
 
 }
@@ -923,18 +993,20 @@ p {
     transform: translateX(5px); /* Desplazamiento leve hacia la derecha */
 }
 
+.timeline-content:hover {
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Efecto de luz en hover */
+}
+
 .circle {
-    width: 15px;
-    height: 15px;
-    background-color: #0a192f;
-    border: 2px solid #00FFFF;
+    width: 20px;
+    height: 20px;
+    background-color: #00ffff;
     border-radius: 50%;
-    cursor: pointer;
-    position: relative;
-    z-index: 2;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-    transition: box-shadow 0.3s ease;
-    margin-bottom: 10px; /* Espacio entre el círculo y el contenido */
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 .circle:hover {
@@ -942,16 +1014,15 @@ p {
 }
 
 .timeline-date {
-    font-size: 1.3rem;
     background-color: #00FFFF;
     color: #0a192f;
-    font-weight: 700;
     padding: 5px 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 3;
+    border-radius: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -35px; /* Cambia el top para que la fecha no esté encima del círculo */
+    font-weight: bold;
 }
 
 .timeline-date:hover {
@@ -961,18 +1032,11 @@ p {
 }
 
 .timeline-content {
-    background-color: #112240;
-    padding: 25px 40px;
+   padding: 20px 30px;
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    width: 100%;
     position: relative;
-    margin-top: 10px;
-    opacity: 1;
-    max-height: 0;
-    transition: max-height 0.6s ease, opacity 0.6s ease;
-    overflow: hidden;
-    margin-bottom: 40px;
+    transition: all 0.3s ease-in-out;
 }
 
 .timeline-content.expanded {

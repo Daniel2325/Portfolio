@@ -18,23 +18,35 @@ const Navbar = () => {
         setIsOpen(!isOpen);
     }
 
+    // Detectar la sección activa mientras el usuario navega
     useEffect(() => {
         const handleScroll = () => {
             const sections = ['home', 'expertise', 'work', 'experience', 'contact'];
             let currentSection = '';
-            // Recorrer las secciones y verificar cuál está visible en el viewport
+
             sections.forEach(section => {
                 const element = document.getElementById(section);
                 const bounding = element?.getBoundingClientRect();
-                if (bounding && bounding.top >= 0 && bounding.top <= window.innerHeight / 2) {
-                    currentSection = section;
+
+                if (bounding) {
+                    // Verificar si la sección está en el viewport, incluyendo parte superior e inferior
+                    const isSectionVisible = bounding.top <= window.innerHeight / 2 && bounding.bottom >= window.innerHeight / 2;
+
+                    if (isSectionVisible) {
+                        currentSection = section;
+                    }
                 }
             });
+
             setActiveSection(currentSection);
         };
+
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
+
 
     return (
         <div className="navbar">

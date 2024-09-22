@@ -1,7 +1,6 @@
 import React from "react";
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 
-
 const Contact = () => {
     return (
         <section id="contact" className="contact-section">
@@ -10,7 +9,7 @@ const Contact = () => {
 
             <div className="contact-container">
                 <div className="contact-details contact-card">
-                    <h3>Contact Information</h3>
+                    <h3 className="contact-title">Contact Information</h3>
                     <div className="contact-item">
                         <FaEnvelope className="contact-icon"/>
                         <a href="mailto:daniel@example.com">daniel@example.com</a>
@@ -21,12 +20,12 @@ const Contact = () => {
                     </div>
                     <div className="contact-item">
                         <FaGithub className="contact-icon"/>
-                        <a href="" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://github.com/daniel" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </div>
                 </div>
 
                 <div className="contact-form contact-card">
-                    <h3>Send a Message</h3>
+                    <h3 className="contact-title">Send a Message</h3>
                     <form>
                         <div className="form-group">
                             <input type="text" name="name" placeholder="Your Name" required />
@@ -37,7 +36,7 @@ const Contact = () => {
                         <div className="form-group">
                             <textarea name="message" placeholder="Your Message" required></textarea>
                         </div>
-                        <button type="submit">Send Message</button>
+                        <button type="submit" className="send-message-button">Send Message</button>
                     </form>
                 </div>
             </div>
