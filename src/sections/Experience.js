@@ -23,16 +23,17 @@ const Experience = () => {
                             <FontAwesomeIcon icon={faCode} className="experience-icon" />
                             <FontAwesomeIcon icon={faDatabase} className="experience-icon" />
                             <FontAwesomeIcon icon={faProjectDiagram} className="experience-icon" />
-                            <h3>Analista de Programación</h3>
+                            <h3>Analista Programador</h3>
                             <h4>Metropolitan Touring, Quito, Ecuador</h4>
                             <p>
-                                Responsable de analizar, diseñar y desarrollar soluciones de software utilizando
-                                tecnologías modernas como Git y patrones de arquitectura.
+                                Responsable de liderar mejoras continuas en los sistemas de la empresa, específicamente en Salesforce y la integración con sistemas hoteleros y de operaciones utilizando patrones de arquitectura para mejorar procesos.
                             </p>
                             <ul>
-                                <li>Automatización de procesos internos, reduciendo el tiempo de desarrollo en un <span className="highlight">20%</span>.</li>
-                                <li>Mejora de la eficiencia de las bases de datos mediante optimización de consultas SQL.</li>
-                                <li>Implementación de pruebas unitarias con un <span className="highlight">30%</span> menos de errores en producción.</li>
+                                <li>Mejoras en flujos de Salesforce: Desarrollo y optimización de nuevas funcionalidades en Salesforce mediante Apex, triggers, LWC, y flows, mejorando la eficiencia en los procesos comerciales y operativos.</li>
+                                <li>Soporte de nivel 2: Resolución de errores críticos, asegurando la continuidad de los procesos comerciales y reduciendo tiempos de inactividad.</li>
+                                <li>Integraciones con sistemas hoteleros: Refactorización de las integraciones entre Salesforce y sistemas como Opera y XTS, lo que resultó en una reducción del 90% en errores de conectividad y problemas de timeout.</li>
+                                <li>Automatización de despliegues: Implementación de DevOps Center en Salesforce, lo que permitió una automatización completa del ciclo de vida de despliegue y mejoró el control sobre los entornos.</li>
+                                <li>Integración con JDE: Desarrollo de integraciones con el sistema JDE, mejorando la conectividad y automatización de flujos operativos.</li>
                             </ul>
                         </div>
                     </div>
@@ -41,16 +42,16 @@ const Experience = () => {
                     <div className="timeline-item">
                         <div className="timeline-date" onClick={() => handleToggle(1)}>2021 - 2022</div>
                         <div className={`timeline-content ${expandedItems[1] ? 'expanded' : 'collapsed'}`}>
-                            <h3>Ingeniero de Software Júnior</h3>
+                            <h3>Programador Júnior</h3>
                             <h4>Metropolitan Touring, En remoto</h4>
                             <p>
-                                Desarrollo de aplicaciones usando programación en .NET y Entity Framework, colaborando
+                                Participación en el desarrollo del sistema CORE para el área de operaciones, utilizando tecnologías de última generación como React en el frontend y .NET en el backend, colaborando
                                 en un entorno ágil con DevOps.
                             </p>
                             <ul>
-                                <li>Reducción de costos en infraestructura mediante la integración de Docker en CI/CD.</li>
-                                <li>Diseño e implementación de microservicios mejorando la escalabilidad en un <span className="highlight">40%</span>.</li>
-                                <li>Optimización de procesos, reduciendo el tiempo de despliegue en un <span className="highlight">15%</span>.</li>
+                                <li>Desarrollo del sistema CORE: Colaboración en la construcción de un nuevo sistema de operaciones, reemplazando una solución obsoleta, mejorando significativamente los tiempos de respuesta y rendimiento de los procesos operativos.</li>
+                                <li>Automatización de desarrollo: Implementación de pipelines CI/CD con Azure DevOps, lo que permitió reducir en un 99% los tiempos de despliegue y mejorar la calidad del código mediante SonarCloud.</li>
+                                <li>Microservicios y escalabilidad: Diseño e implementación de microservicios en .NET, mejorando la escalabilidad y reduciendo los costos de infraestructura al integrar Docker en los flujos de CI/CD.<span className="highlight">15%</span>.</li>
                             </ul>
                         </div>
                     </div>
@@ -62,13 +63,11 @@ const Experience = () => {
                             <h3>Pasante IT</h3>
                             <h4>Metropolitan Touring, En remoto</h4>
                             <p>
-                                Participación en el soporte técnico y desarrollo de software, trabajando directamente
-                                con bases de datos SQL.
+                                Apoyo en la mejora de procesos internos y en el control de la calidad del código desarrollado en el área de IT.
                             </p>
                             <ul>
-                                <li>Soporte en la migración de datos críticos, reduciendo tiempos de inactividad.</li>
-                                <li>Desarrollo de reportes analíticos para la toma de decisiones del negocio.</li>
-                                <li>Aprendizaje y aplicación de mejores prácticas de desarrollo, incluyendo principios SOLID.</li>
+                                <li>Optimización de procesos de contratación IT: Colaboración en la mejora del flujo de contratación de proveedores IT, asegurando un control más eficiente del código desarrollado.</li>
+                                <li>Control de calidad de código: Desarrollo de reportes y herramientas para asegurar la calidad y cumplimiento de los estándares de desarrollo.</li>
                             </ul>
                         </div>
                     </div>
