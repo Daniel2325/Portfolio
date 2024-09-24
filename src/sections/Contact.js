@@ -12,15 +12,15 @@ const Contact = () => {
                     <h3 className="contact-title">Contact Information</h3>
                     <div className="contact-item">
                         <FaEnvelope className="contact-icon"/>
-                        <a href="mailto:daniel@example.com">daniel@example.com</a>
+                        <a href="mailto:dan.iban232526@gmail.com">dan.iban232526@gmail.com</a>
                     </div>
                     <div className="contact-item">
                         <FaLinkedin className="contact-icon"/>
-                        <a href="https://www.linkedin.com/in/daniel" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/daniel-dom%C3%ADnguez-04a866210/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     </div>
                     <div className="contact-item">
                         <FaGithub className="contact-icon"/>
-                        <a href="https://github.com/daniel" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://github.com/Daniel2325" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </div>
                 </div>
 
