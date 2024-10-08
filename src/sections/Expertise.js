@@ -12,8 +12,7 @@ const Expertise = () => {
                         <h3>
                             <span className="highlight pink">Backend</span> Development
                         </h3>
-                        <p> Experto en la creación de aplicaciones robustas utilizando .NET, C#, y Node.js, con
-                            integración de APIs REST, SOAP y Microservicios.</p>
+                        <p> Experto en crear aplicaciones robustas utilizando .NET, C#, y Node.js. Tengo experiencia en la integración de APIs REST, SOAP y Microservicios, asegurando soluciones escalables y eficientes.</p>
                         <div className="tech-icons">
                             <i className="fab fa-node-js"></i>
                             <i className="fab fa-docker"></i>
@@ -30,7 +29,7 @@ const Expertise = () => {
                         <h3>
                             <span className="highlight blue">Frontend</span> Development
                         </h3>
-                        <p> Experiencia en React, Angular y desarrollo de interfaces altamente interactivas, accesibles y con excelente rendimiento.</p>
+                        <p> Amplia experiencia en React y Angular, desarrollando interfaces altamente interactivas y accesibles, optimizadas para un rendimiento excepcional. También domino TypeScript, lo que mejora la mantenibilidad y escalabilidad del código.</p>
                     </div>
                 </div>
 
@@ -41,7 +40,7 @@ const Expertise = () => {
                         <h3>
                             <span className="highlight orange">Salesforce</span> Development
                         </h3>
-                        <p> Especializado en el desarrollo y optimización de flujos con Salesforce, Apex, SOQL, Triggers, y Flows.</p>
+                        <p>Especializado en la optimización de flujos en Salesforce, incluyendo Apex, SOQL, Triggers y Flows. Me enfoco en soluciones que impulsan la eficiencia operativa y la satisfacción del cliente.</p>
                     </div>
                 </div>
                 {/* DevOps */}
@@ -51,7 +50,7 @@ const Expertise = () => {
                             <span className="highlight blue">DevOps</span> & CI/CD
                         </h3>
                         <p>
-                            Implementación de pipelines de CI/CD con Azure DevOps, integración de Docker, y automatización de despliegues.
+                            Implementación de pipelines de CI/CD con Azure DevOps, integrando Docker y automatizando despliegues para mejorar la velocidad y fiabilidad del desarrollo de software.
                         </p>
                         <div className="tech-icons">
                             <i className="fab fa-azure"></i>

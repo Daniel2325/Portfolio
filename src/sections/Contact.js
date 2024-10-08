@@ -4,12 +4,12 @@ import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 const Contact = () => {
     return (
         <section id="contact" className="contact-section">
-            <h2>Let's Get in Touch</h2>
-            <p>If you have a project or just want to say hi, feel free to reach out!</p>
+            <h2>Pongámonos en contacto</h2>
+            <p>Si tienes un proyecto o simplemente quieres saludar, ¡No dudes en comunicarte!</p>
 
             <div className="contact-container">
                 <div className="contact-details contact-card">
-                    <h3 className="contact-title">Contact Information</h3>
+                    <h3 className="contact-title">Información de contacto</h3>
                     <div className="contact-item">
                         <FaEnvelope className="contact-icon"/>
                         <a href="mailto:dan.iban232526@gmail.com">dan.iban232526@gmail.com</a>
@@ -25,18 +25,18 @@ const Contact = () => {
                 </div>
 
                 <div className="contact-form contact-card">
-                    <h3 className="contact-title">Send a Message</h3>
+                    <h3 className="contact-title">Envía un mensaje</h3>
                     <form>
                         <div className="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required />
+                            <input type="text" name="name" placeholder="Nombre" required />
                         </div>
                         <div className="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required/>
+                            <input type="email" name="email" placeholder="Email" required/>
                         </div>
                         <div className="form-group">
-                            <textarea name="message" placeholder="Your Message" required></textarea>
+                            <textarea name="message" placeholder="Message" required></textarea>
                         </div>
-                        <button type="submit" className="send-message-button">Send Message</button>
+                        <button type="submit" className="send-message-button">Enviar Mensaje</button>
                     </form>
                 </div>
             </div>

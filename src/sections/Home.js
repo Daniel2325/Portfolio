@@ -61,14 +61,14 @@ const Home = () => {
                                 DevOps & Salesforce</p>
 
                             <p className="bio">
-                                Ingeniero Full Stack con 3 años de experiencia en frontend (React, Angular) y backend
-                                (.NET, Python).
-                                Administro Azure DevOps implementando CI/CD y análisis de código con SonarCloud.
+                                Ingeniero Full Stack con más de 3 años de experiencia en desarrollo frontend (React,
+                                Angular) y backend (.NET, Python), dedicado a crear soluciones efectivas y escalables.
                             </p>
                             <p className="bio">
-                                Experto en Salesforce, he creado soluciones escalables para grandes empresas,
-                                optimizando su rendimiento en un 30%.
-                                Mi enfoque está en el desarrollo ágil, automatización y optimización de procesos.
+                                Administrador de Azure DevOps, especializado en implementar CI/CD y en la realización de análisis de código efectivos con SonarCloud para asegurar la calidad y el rendimiento del software.
+                            </p>
+                            <p className="bio">
+                                Como experto en Salesforce, he diseñado soluciones escalables que han mejorado el rendimiento empresarial en un 30%, contribuyendo a una mayor eficiencia y productividad.
                             </p>
                             <div className="tech-icons">
                                 <FontAwesomeIcon icon={faReact}/>

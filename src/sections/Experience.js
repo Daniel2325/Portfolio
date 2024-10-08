@@ -20,20 +20,16 @@ const Experience = () => {
                     <div className="timeline-item">
                         <div className="timeline-date"onClick={() => handleToggle(0)} >2022 - Present</div>
                         <div className={`timeline-content ${expandedItems[0] ? 'expanded' : 'collapsed'}`}>
-                            <FontAwesomeIcon icon={faCode} className="experience-icon" />
-                            <FontAwesomeIcon icon={faDatabase} className="experience-icon" />
-                            <FontAwesomeIcon icon={faProjectDiagram} className="experience-icon" />
                             <h3>Analista Programador</h3>
                             <h4>Metropolitan Touring, Quito, Ecuador</h4>
                             <p>
-                                Responsable de liderar mejoras continuas en los sistemas de la empresa, específicamente en Salesforce y la integración con sistemas hoteleros y de operaciones utilizando patrones de arquitectura para mejorar procesos.
+                                Responsable de liderar mejoras continuas en los sistemas de la empresa, específicamente en Salesforce y en la integración de sistemas hoteleros y de operaciones utilizando patrones de arquitectura para optimizar procesos.
                             </p>
                             <ul>
-                                <li>Mejoras en flujos de Salesforce: Desarrollo y optimización de nuevas funcionalidades en Salesforce mediante Apex, triggers, LWC, y flows, mejorando la eficiencia en los procesos comerciales y operativos.</li>
-                                <li>Soporte de nivel 2: Resolución de errores críticos, asegurando la continuidad de los procesos comerciales y reduciendo tiempos de inactividad.</li>
-                                <li>Integraciones con sistemas hoteleros: Refactorización de las integraciones entre Salesforce y sistemas como Opera y XTS, lo que resultó en una reducción del 90% en errores de conectividad y problemas de timeout.</li>
-                                <li>Automatización de despliegues: Implementación de DevOps Center en Salesforce, lo que permitió una automatización completa del ciclo de vida de despliegue y mejoró el control sobre los entornos.</li>
-                                <li>Integración con JDE: Desarrollo de integraciones con el sistema JDE, mejorando la conectividad y automatización de flujos operativos.</li>
+                                <li>Optimización de flujos en Salesforce: Desarrollé y mejoré funcionalidades mediante Apex, triggers, LWC y flows, logrando un aumento significativo en la eficiencia de los procesos comerciales y operativos.</li>
+                                <li>Resolución de errores críticos: Brindé soporte de nivel 2 para garantizar la continuidad de los procesos comerciales, reduciendo tiempos de inactividad en un 30%.</li>
+                                <li>Integración de sistemas: Refactoricé las integraciones entre Salesforce y sistemas como Opera y XTS, lo que resultó en una reducción del 90% en errores de conectividad y problemas de timeout.</li>
+                                <li>Automatización de despliegues: Implementé DevOps Center en Salesforce, lo que permitió una automatización completa del ciclo de despliegue, mejorando el control sobre los entornos.</li>
                             </ul>
                         </div>
                     </div>
@@ -45,13 +41,12 @@ const Experience = () => {
                             <h3>Programador Júnior</h3>
                             <h4>Metropolitan Touring, En remoto</h4>
                             <p>
-                                Participación en el desarrollo del sistema CORE para el área de operaciones, utilizando tecnologías de última generación como React en el frontend y .NET en el backend, colaborando
-                                en un entorno ágil con DevOps.
+                                Participación en el desarrollo del sistema CORE: Colaboré en la construcción de un nuevo sistema de operaciones, reemplazando una solución obsoleta, lo que mejoró significativamente los tiempos de respuesta y rendimiento de los procesos operativos.
                             </p>
                             <ul>
-                                <li>Desarrollo del sistema CORE: Colaboración en la construcción de un nuevo sistema de operaciones, reemplazando una solución obsoleta, mejorando significativamente los tiempos de respuesta y rendimiento de los procesos operativos.</li>
-                                <li>Automatización de desarrollo: Implementación de pipelines CI/CD con Azure DevOps, lo que permitió reducir en un 99% los tiempos de despliegue y mejorar la calidad del código mediante SonarCloud.</li>
-                                <li>Microservicios y escalabilidad: Diseño e implementación de microservicios en .NET, mejorando la escalabilidad y reduciendo los costos de infraestructura al integrar Docker en los flujos de CI/CD.<span className="highlight">15%</span>.</li>
+                                <li>Automatización de desarrollo: Implementé pipelines de CI/CD con Azure DevOps, logrando una reducción del 99% en los tiempos de despliegue y mejorando la calidad del código mediante SonarCloud.</li>
+                                <li>Microservicios y escalabilidad: Diseñé e implementé microservicios en .NET, aumentando la escalabilidad y reduciendo los costos de infraestructura al integrar Docker en los flujos de CI/CD.</li>
+                                <li>El frontend fue desarrollado utilizando React y TypeScript, lo que permitió una experiencia de usuario más rica y mantenible.<span className="highlight">15%</span>.</li>
                             </ul>
                         </div>
                     </div>
