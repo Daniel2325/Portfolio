@@ -1,9 +1,9 @@
 name: Deploy to GitHub Pages
 
 on:
-  pull_request:
+  push:
     branches:
-      - master
+      - master # Despliegue automático cuando hay un push a master
 
 jobs:
   deploy:
@@ -17,7 +17,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '16'
-
       - name: Install dependencies
         run: npm install
 
@@ -29,4 +28,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
-          publish_branch: gh-pages # Rama donde se desplegará
+          publish_branch: master
