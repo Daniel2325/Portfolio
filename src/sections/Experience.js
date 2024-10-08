@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode, faDatabase, faProjectDiagram } from '@fortawesome/free-solid-svg-icons';
+
 
 const Experience = () => {
     const [expandedItems, setExpandedItems] = useState([true, true, true]);
