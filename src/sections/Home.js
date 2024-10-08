@@ -33,7 +33,7 @@ const Typewriter = ({text}) => {
         return () => clearInterval(interval);
     }, [text]);
 
-    return <h1 ref={textRef}></h1>;
+    return <h1 ref={textRef} aria-hidden="true"></h1>;
 };
 
 const Home = () => {
