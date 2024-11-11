@@ -10,7 +10,7 @@ import {
     faDocker,
     faGithub,
     faSalesforce,
-    faPython, faLinkedinIn
+    faPython
 } from '@fortawesome/free-brands-svg-icons';
 import {useEffect, useRef, useState} from "react";
 import {faDownload, faFolderOpen} from "@fortawesome/free-solid-svg-icons";
