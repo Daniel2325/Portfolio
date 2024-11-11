@@ -1,5 +1,4 @@
 import './LoadingScreen.css';
-import devops from "../../assets/images/devops.png";
 
 const LoadingScreen = () => {
     return (
