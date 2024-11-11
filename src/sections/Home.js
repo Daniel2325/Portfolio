@@ -1,5 +1,6 @@
 import {scrollToSection} from "../utils/scrollTo";
 import fotoDaniel from "../assets/images/foto1.jpeg";
+import cvDaniel from "../assets/docs/Currículum Vitae Cv Daniel Dominguez SF.pdf";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 import {
@@ -9,7 +10,7 @@ import {
     faDocker,
     faGithub,
     faSalesforce,
-    faPython
+    faPython, faLinkedinIn
 } from '@fortawesome/free-brands-svg-icons';
 import {useEffect, useRef, useState} from "react";
 import {faDownload, faFolderOpen} from "@fortawesome/free-solid-svg-icons";
@@ -56,19 +57,18 @@ const Home = () => {
                         <div className="home-text">
                             <Typewriter text={`Daniel.D Dev`}/>
 
-                            <p className="subtitle">Full Stack Developer <span className="divider">|</span> Especialista
+                            <p className="subtitle">Desarrollador Full Stack <span className="divider">|</span> Especialista
                                 en
                                 DevOps & Salesforce</p>
 
                             <p className="bio">
-                                Ingeniero Full Stack con más de 3 años de experiencia en desarrollo frontend (React,
-                                Angular) y backend (.NET, Python), dedicado a crear soluciones efectivas y escalables.
+                                Ingeniero Full Stack con más de 3 años de experiencia en desarrollo de frontend (React, Angular) y backend (.NET), comprometido en diseñar soluciones escalables y optimizadas para maximizar el rendimiento y la eficiencia.
                             </p>
                             <p className="bio">
-                                Administrador de Azure DevOps, especializado en implementar CI/CD y en la realización de análisis de código efectivos con SonarCloud para asegurar la calidad y el rendimiento del software.
+                                Experto en DevOps y Azure DevOps, con un enfoque en la implementación de pipelines CI/CD y análisis de código en SonarCloud para asegurar la calidad y robustez en cada etapa de desarrollo.
                             </p>
                             <p className="bio">
-                                Como experto en Salesforce, he diseñado soluciones escalables que han mejorado el rendimiento empresarial en un 30%, contribuyendo a una mayor eficiencia y productividad.
+                                Líder en soluciones Salesforce, creando arquitecturas escalables que han impulsado la productividad empresarial en un 30%, mejorando significativamente la eficiencia de los procesos y facilitando la toma de decisiones estratégicas.
                             </p>
                             <div className="tech-icons">
                                 <FontAwesomeIcon icon={faReact}/>
@@ -83,11 +83,11 @@ const Home = () => {
 
                             <div className="cta-buttons">
                                 <button onClick={() => scrollToSection('work')} className="cta-button">
-                                    <FontAwesomeIcon icon={faFolderOpen}/> Explora mis Proyectos
+                                    <FontAwesomeIcon icon={faFolderOpen}/> Contacta conmigo
                                 </button>
-                                <button className="cta-button download">
+                                <a href={cvDaniel} download className="cta-button download">
                                     <FontAwesomeIcon icon={faDownload}/> Descarga mi CV
-                                </button>
+                                </a>
                             </div>
 
                             <div className="scroll-icon" onClick={() => scrollToSection('expertise')}>
