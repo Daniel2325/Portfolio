@@ -2,14 +2,10 @@ import './LoadingScreen.css';
 
 const LoadingScreen = () => {
     return (
-        <>
-            <div className="loading-screen">
-                {/*<img src={devops} alt="Cargando..." className="loading-gif"/>*/}
-                <p className="loading-text">Preparando tu experiencia DevOps...</p>
-
-            </div>
-
-        </>
+        <div className="loading-screen">
+            <div className="spinner"></div>
+            <p className="loading-text">Preparando tu experiencia...</p>
+        </div>
     );
 };
 

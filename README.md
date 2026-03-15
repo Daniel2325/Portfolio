@@ -1,70 +1,160 @@
-# Getting Started with Create React App
+# Daniel Domínguez — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Portfolio profesional desarrollado con React 18, diseñado como carta de presentación para roles de Desarrollador Full Stack con especialización en DevOps y Salesforce.
 
-## Available Scripts
+**Demo en vivo:** [daniel2325.github.io/Portfolio](https://daniel2325.github.io/Portfolio/)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Tabla de contenidos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Descripción](#descripción)
+- [Características](#características)
+- [Stack tecnológico](#stack-tecnológico)
+- [Estructura del proyecto](#estructura-del-proyecto)
+- [Inicio rápido](#inicio-rápido)
+- [Scripts disponibles](#scripts-disponibles)
+- [Despliegue](#despliegue)
+- [Personalización](#personalización)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Descripción
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Single Page Application (SPA) de navegación por scroll con cinco secciones principales:
 
-### `npm run build`
+| Sección      | Contenido                                          |
+|--------------|----------------------------------------------------|
+| **Home**     | Presentación con efecto typewriter, bio y tech stack |
+| **Expertise**| Áreas de especialización con skill tags            |
+| **Projects** | Proyectos destacados con filtro por tipo           |
+| **Experience**| Timeline interactivo de experiencia laboral       |
+| **Contact**  | Información de contacto y formulario de mensaje    |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Características
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Cursor personalizado con seguimiento de mouse
+- Animación typewriter en el título hero
+- Pantalla de carga con spinner animado
+- Navbar fijo con detección de sección activa por scroll
+- Modal DevOps con información de perfil
+- Timeline de experiencia expandible/colapsable
+- Filtro de proyectos por categoría
+- Botón scroll-to-top flotante
+- Formulario de contacto funcional (abre cliente de correo)
+- Diseño totalmente responsive (mobile-first breakpoint: 768px)
+- SEO básico: meta tags, Open Graph, Twitter Cards
+- PWA-ready con `manifest.json` personalizado
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Stack tecnológico
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Tecnología | Versión | Uso |
+|---|---|---|
+| React | 18.3.1 | Framework UI |
+| Create React App | 5.0.1 | Toolchain |
+| FontAwesome | 6.6.0 | Iconografía (navbar, hero) |
+| React Icons | 5.3.0 | Iconografía (contact, projects) |
+| CSS3 | — | Estilos personalizados |
+| GitHub Pages | — | Hosting y despliegue |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Estructura del proyecto
 
-## Learn More
+```
+src/
+├── assets/
+│   ├── docs/          # CV en PDF
+│   └── images/        # Fotos de perfil y logos
+├── components/
+│   ├── LoadingScreen/ # Pantalla de carga inicial
+│   ├── Navbar/        # Navegación fija con detección de sección
+│   ├── Footer/        # Pie de página
+│   └── ScrollToTop/   # Botón flotante para volver al inicio
+├── data/
+│   └── portfolio.js   # Fuente única de verdad para todo el contenido
+├── hooks/
+│   └── useActiveSection.js  # Hook para detectar sección visible
+├── sections/
+│   ├── Home.js        # Hero section
+│   ├── Expertise.js   # Áreas de expertise con skill tags
+│   ├── Projects.js    # Grid de proyectos con filtro
+│   ├── Experience.js  # Timeline de experiencia laboral
+│   └── Contact.js     # Información y formulario de contacto
+├── styles/
+│   └── main.css       # Estilos globales
+└── utils/
+    └── scrollTo.js    # Utilidad de scroll suave
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Inicio rápido
 
-### Code Splitting
+**Prerequisitos:** Node.js 16+ y npm.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+# Clonar el repositorio
+git clone https://github.com/Daniel2325/Portfolio.git
+cd Portfolio
 
-### Analyzing the Bundle Size
+# Instalar dependencias
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Iniciar servidor de desarrollo
+npm start
+```
 
-### Making a Progressive Web App
+La aplicación estará disponible en [http://localhost:3000](http://localhost:3000).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## Scripts disponibles
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+| Comando | Descripción |
+|---|---|
+| `npm start` | Servidor de desarrollo con hot reload |
+| `npm run build` | Build de producción optimizado en `/build` |
+| `npm test` | Ejecuta los tests con Jest |
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Despliegue
 
-### `npm run build` fails to minify
+El proyecto está configurado para desplegarse en GitHub Pages. El campo `homepage` en `package.json` apunta a la URL de producción.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+# Build y deploy a GitHub Pages
+npm run build
+# Subir el contenido de /build a la rama gh-pages
+```
+
+Recomendado: usar el paquete `gh-pages` para automatizar el proceso.
+
+---
+
+## Personalización
+
+Todo el contenido del portfolio está centralizado en **`src/data/portfolio.js`**. Para actualizar la información:
+
+1. Editar `PERSONAL_INFO` con tus datos de contacto
+2. Actualizar `BIO` con tu descripción profesional
+3. Modificar `EXPERTISE` con tus áreas de conocimiento y skills
+4. Actualizar `EXPERIENCES` con tu historial laboral
+5. Editar `PROJECTS` con tus proyectos destacados
+6. Reemplazar la foto en `src/assets/images/` y actualizar la referencia en `Home.js`
+7. Reemplazar el CV en `src/assets/docs/` y actualizar la referencia en `Home.js`
+
+---
+
+## Arquitectura
+
+Ver [ARCHITECTURE.md](./ARCHITECTURE.md) para decisiones técnicas, diagrama de componentes y guías de contribución.
+
+---
+
+*Desarrollado por Daniel Domínguez — [LinkedIn](https://www.linkedin.com/in/daniel-domínguez-04a866210/)*
