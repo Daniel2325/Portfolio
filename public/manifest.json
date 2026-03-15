@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Daniel.D Dev",
+  "name": "Daniel Domínguez - Portfolio",
+  "description": "Portfolio profesional de Daniel Domínguez, Desarrollador Full Stack especializado en React, .NET, DevOps y Salesforce.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0f2027",
+  "background_color": "#0f2027"
 }
