@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { EXPERIENCES } from '../data/portfolio';
+import { useLanguage } from '../context/LanguageContext';
 
 const Experience = () => {
+    const { t } = useLanguage();
+    const { EXPERIENCES, UI } = t;
     const [expandedItems, setExpandedItems] = useState(() => Array(EXPERIENCES.length).fill(true));
 
     const handleToggle = (index) => {
@@ -10,7 +12,7 @@ const Experience = () => {
 
     return (
         <section id="experience" className="experience-section">
-            <h2>Experiencia</h2>
+            <h2>{UI.experience.sectionTitle}</h2>
             <div className="timeline-container">
                 <div className="timeline">
                     {EXPERIENCES.map((exp, index) => (
