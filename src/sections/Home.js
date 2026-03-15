@@ -82,7 +82,7 @@ const Home = () => {
                             </div>
 
                             <div className="cta-buttons">
-                                <button onClick={() => scrollToSection('work')} className="cta-button">
+                                <button onClick={() => scrollToSection('contact')} className="cta-button">
                                     <FontAwesomeIcon icon={faFolderOpen}/> Contacta conmigo
                                 </button>
                                 <a href={cvDaniel} download className="cta-button download">
