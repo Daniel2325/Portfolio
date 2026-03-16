@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.e2041013.css",
-    "main.js": "/Portfolio/static/js/main.68e4eb5b.js",
+    "main.css": "/Portfolio/static/css/main.a9d689ea.css",
+    "main.js": "/Portfolio/static/js/main.2568ad19.js",
     "static/media/Currículum Vitae Cv Daniel Dominguez SF.pdf": "/Portfolio/static/media/Currículum Vitae Cv Daniel Dominguez SF.a9adbcac4096310a0124.pdf",
     "static/media/DanielDev Logo.jpeg": "/Portfolio/static/media/DanielDev Logo.35db3d61e8812f3e622b.jpeg",
     "static/media/foto1.jpeg": "/Portfolio/static/media/foto1.8a51d977a38162e1d43a.jpeg",
     "index.html": "/Portfolio/index.html",
-    "main.e2041013.css.map": "/Portfolio/static/css/main.e2041013.css.map",
-    "main.68e4eb5b.js.map": "/Portfolio/static/js/main.68e4eb5b.js.map"
+    "main.a9d689ea.css.map": "/Portfolio/static/css/main.a9d689ea.css.map",
+    "main.2568ad19.js.map": "/Portfolio/static/js/main.2568ad19.js.map"
   },
   "entrypoints": [
-    "static/css/main.e2041013.css",
-    "static/js/main.68e4eb5b.js"
+    "static/css/main.a9d689ea.css",
+    "static/js/main.2568ad19.js"
   ]
 }
