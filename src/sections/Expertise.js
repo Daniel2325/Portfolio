@@ -1,10 +1,13 @@
 import React from 'react';
-import { EXPERTISE } from '../data/portfolio';
+import { useLanguage } from '../context/LanguageContext';
 
 const Expertise = () => {
+    const { t } = useLanguage();
+    const { EXPERTISE, UI } = t;
+
     return (
         <section id="expertise" className="expertise-section">
-            <h2>My Expertise</h2>
+            <h2>{UI.expertise.sectionTitle}</h2>
             <div className="expertise-grid">
                 {EXPERTISE.map(({ icon, highlightClass, title, titleSuffix, description, skills }) => (
                     <div key={title} className="expertise-item">

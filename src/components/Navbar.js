@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo from '../assets/images/DanielDev Logo.jpeg';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import useActiveSection from '../hooks/useActiveSection';
-import { PERSONAL_INFO } from '../data/portfolio';
+import { useLanguage } from '../context/LanguageContext';
 
 const NAV_LINKS = [
     { id: 'home', label: 'Home' },
@@ -19,6 +19,8 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const activeSection = useActiveSection();
+    const { lang, toggleLanguage, t } = useLanguage();
+    const { PERSONAL_INFO, UI } = t;
 
     const handleNavigation = (event, id) => {
         event.preventDefault();
@@ -42,6 +44,22 @@ const Navbar = () => {
                     <FontAwesomeIcon icon={faInfinity} />
                 </div>
 
+                <div className="lang-toggle">
+                    <button
+                        onClick={() => lang !== 'es' && toggleLanguage()}
+                        className={lang === 'es' ? 'active' : ''}
+                    >
+                        ES
+                    </button>
+                    <span>|</span>
+                    <button
+                        onClick={() => lang !== 'en' && toggleLanguage()}
+                        className={lang === 'en' ? 'active' : ''}
+                    >
+                        EN
+                    </button>
+                </div>
+
                 <div className={`navbar-links ${isOpen ? 'active' : ''}`}>
                     {NAV_LINKS.map(({ id, label }) => (
                         <a
@@ -60,7 +78,7 @@ const Navbar = () => {
                 <div className="devops-modal" onClick={toggleModal}>
                     <div className="devops-modal-content" onClick={(e) => e.stopPropagation()}>
 
-                        <button className="modal-close" onClick={toggleModal} aria-label="Cerrar">
+                        <button className="modal-close" onClick={toggleModal} aria-label={UI.nav.modalClose}>
                             <FontAwesomeIcon icon={faTimes} />
                         </button>
 
@@ -68,8 +86,8 @@ const Navbar = () => {
                             <div className="modal-avatar-wrapper">
                                 <img src={logo} alt="Daniel Domínguez" className="modal-avatar" />
                             </div>
-                            <h3 className="modal-name">Daniel Domínguez</h3>
-                            <p className="modal-role">Full Stack · DevOps · Salesforce</p>
+                            <h3 className="modal-name">{PERSONAL_INFO.name}</h3>
+                            <p className="modal-role">{PERSONAL_INFO.titleDisplay} · {PERSONAL_INFO.subtitleDisplay}</p>
                             <div className="modal-social">
                                 <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                                     <FontAwesomeIcon icon={faLinkedinIn} />
@@ -82,26 +100,23 @@ const Navbar = () => {
 
                         <div className="modal-body">
                             <span className="modal-eyebrow">
-                                <FontAwesomeIcon icon={faInfinity} /> DevOps &amp; Crecimiento
+                                <FontAwesomeIcon icon={faInfinity} /> DevOps &amp; Growth
                             </span>
-                            <h2 className="modal-title">Sin Límites</h2>
-                            <p className="modal-description">
-                                Comprometido con prácticas DevOps que garantizan integración continua, entrega confiable
-                                y código de alta calidad. Conectemos para construir soluciones que marquen la diferencia.
-                            </p>
+                            <h2 className="modal-title">{UI.nav.modalTitle}</h2>
+                            <p className="modal-description">{UI.nav.modalDescription}</p>
 
                             <div className="modal-stats">
                                 <div className="modal-stat">
                                     <span className="stat-value">4+</span>
-                                    <span className="stat-label">Años de experiencia</span>
+                                    <span className="stat-label">{UI.nav.statYears}</span>
                                 </div>
                                 <div className="modal-stat">
                                     <span className="stat-value">99%</span>
-                                    <span className="stat-label">Reducción en deploys</span>
+                                    <span className="stat-label">{UI.nav.statDeploy}</span>
                                 </div>
                                 <div className="modal-stat">
                                     <span className="stat-value">90%</span>
-                                    <span className="stat-label">Menos errores</span>
+                                    <span className="stat-label">{UI.nav.statErrors}</span>
                                 </div>
                             </div>
                         </div>

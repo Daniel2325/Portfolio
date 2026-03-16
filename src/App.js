@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { LanguageProvider } from './context/LanguageContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
@@ -24,17 +25,19 @@ const App = () => {
     }, []);
 
     return (
-        <div className="App">
-            <div className="cursor"></div>
-            <Navbar />
-            <Home />
-            <Expertise />
-            <Projects />
-            <Experience />
-            <Contact />
-            <Footer />
-            <ScrollToTop />
-        </div>
+        <LanguageProvider>
+            <div className="App">
+                <div className="cursor"></div>
+                <Navbar />
+                <Home />
+                <Expertise />
+                <Projects />
+                <Experience />
+                <Contact />
+                <Footer />
+                <ScrollToTop />
+            </div>
+        </LanguageProvider>
     );
 };
 

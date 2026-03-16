@@ -133,6 +133,40 @@ h1, .subtitle, .bio, .cta-buttons {
     transform: scale(1.1);
 }
 
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.75rem;
+    color: #aaa;
+}
+
+.lang-toggle span {
+    color: #444;
+}
+
+.lang-toggle button {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 0.75rem;
+    font-family: inherit;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 3px;
+    transition: color 0.2s ease;
+}
+
+.lang-toggle button:hover {
+    color: #00ffff;
+}
+
+.lang-toggle button.active {
+    color: #00ffff;
+    font-weight: bold;
+}
+
 /* Ocultar el ícono en pantallas pequeñas */
 @media (max-width: 768px) {
     .devops-icon {
